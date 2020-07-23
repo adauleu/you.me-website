@@ -1,3 +1,88 @@
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+p,
+a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+@font-face {
+  font-family: "Parkway Lush";
+  src: url("./resources/fonts/parkway-lush.ttf") format("truetype");
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
 h1 {
   color: red;
+}
+
+body {
+  background-image: url("./resources/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  color: white;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  padding: 40px;
+}
+
+article {
+  text-align: left;
+}
+
+#paragraph-first {
+  color: #b5dac7;
+  font-size: 20px;
+  line-height: 22px;
+  margin-bottom: 10px;
+}
+
+#paragraph-first {
+  font-size: 19px;
+  line-height: 21px;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  background-image: url("./resources/bandeau-desktop.jpg");
+  height: 81px;
+  position: relative;
+}
+
+footer small {
+  font-size: 10px;
+  transform: rotate(180deg);
+  display: block;
+  position: absolute;
+  left: 10px;
+  top: -200px;
+  writing-mode: tb-rl;
+}
+
+nav p {
+  font-family: "Parkway Lush";
+  font-size: 35px;
+  transform: rotate(-15deg);
 }
