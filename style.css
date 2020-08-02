@@ -16,6 +16,11 @@ a {
   vertical-align: baseline;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
+
 @font-face {
   font-family: "Parkway Lush";
   src: url("./resources/fonts/parkway-lush.ttf") format("truetype");
@@ -70,11 +75,12 @@ article {
 footer {
   display: flex;
   flex-direction: row;
+  align-items: center;
   background-image: url("./resources/bandeau-desktop.svg");
+  background-color: rgba(255, 255, 255, 0.85);
   background-position-x: center;
   height: 81px;
   position: relative;
-  opacity: 0.85;
 }
 
 footer small {
@@ -116,10 +122,45 @@ aside p {
 
 nav a {
   display: block;
-  text-decoration: none;
   margin-top: 5px;
 }
 
 nav a:first-child {
   margin-top: 0;
+}
+
+#partners {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+#partners p {
+  color: #b5dac7;
+  font-size: 17px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+#partners img {
+  margin-right: 10px;
+}
+
+#partners img:last-child {
+  margin-right: 0;
+}
+
+#contact p {
+  color: #b5dac7;
+  font-size: 16px;
+}
+
+address {
+  font-style: normal;
+  font-weight: bold;
+}
+
+address a:first-child {
+  margin-right: 5px;
 }
