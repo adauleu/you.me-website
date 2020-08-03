@@ -77,8 +77,10 @@ footer {
   flex-direction: row;
   align-items: center;
   background-image: url("./resources/bandeau-desktop.svg");
-  background-color: rgba(255, 255, 255, 0.85);
+  /** background-color: rgba(255, 255, 255, 0.8); **/
   background-position-x: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 81px;
   position: relative;
 }
@@ -130,17 +132,43 @@ nav a:first-child {
 }
 
 #partners {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 0 10px;
 }
 
-#partners p {
+#partners img {
+  margin-right: 10px;
+}
+
+#partners img:last-child {
+  margin-right: 0;
+}
+
+#contact p {
   color: #b5dac7;
-  font-size: 17px;
+  font-size: 16px;
+}
+
+address {
+  font-style: normal;
   font-weight: bold;
-  margin-right: 20px;
+}
+
+address a:first-child {
+  margin-right: 5px;
+  :rotate(-15deg) ;
+}
+
+nav a {
+  display: block;
+  margin-top: 5px;
+}
+
+nav a:first-child {
+  margin-top: 0;
+}
+
+#partners {
+  padding: 0 10px;
 }
 
 #partners img {
