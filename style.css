@@ -95,7 +95,7 @@ footer small {
   writing-mode: tb-rl;
 }
 
-footer div {
+footer > div {
   width: 50%;
 }
 
@@ -148,14 +148,23 @@ nav a:first-child {
   font-size: 16px;
 }
 
+#contact > div {
+  display: inline-block;
+}
+
 address {
   font-style: normal;
   font-weight: bold;
 }
 
 address a:first-child {
+  float: left;
+  margin-left: 5px;
+}
+
+address a:last-child {
+  float: right;
   margin-right: 5px;
-  :rotate(-15deg) ;
 }
 
 nav a {
@@ -191,4 +200,7 @@ address {
 
 address a:first-child {
   margin-right: 5px;
+}
+
+@media only screen and (max-width: 1084px) {
 }
