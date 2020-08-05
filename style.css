@@ -16,6 +16,14 @@ a {
   vertical-align: baseline;
 }
 
+img {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
 a {
   color: white;
   text-decoration: none;
@@ -143,12 +151,12 @@ nav a:first-child {
   margin-right: 0;
 }
 
-#contact p {
+.contact p {
   color: #b5dac7;
   font-size: 16px;
 }
 
-#contact > div {
+.contact > div {
   display: inline-block;
 }
 
@@ -167,40 +175,21 @@ address a:last-child {
   margin-right: 5px;
 }
 
-nav a {
-  display: block;
-  margin-top: 5px;
-}
-
-nav a:first-child {
-  margin-top: 0;
-}
-
-#partners {
-  padding: 0 10px;
-}
-
-#partners img {
-  margin-right: 10px;
-}
-
-#partners img:last-child {
-  margin-right: 0;
-}
-
-#contact p {
-  color: #b5dac7;
-  font-size: 16px;
-}
-
-address {
-  font-style: normal;
-  font-weight: bold;
-}
-
-address a:first-child {
-  margin-right: 5px;
+.dn-ns {
+  display: none;
 }
 
 @media only screen and (max-width: 1084px) {
+  main {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  header {
+    display: none;
+  }
+
+  .dn-ns {
+    display: block;
+  }
 }
