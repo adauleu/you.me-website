@@ -45,7 +45,7 @@ h1 {
 }
 
 body {
-  background-image: url("./resources/background.jpg");
+  background-image: url("./resources/bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50%;
@@ -130,12 +130,12 @@ aside p {
   transform: rotate(-15deg);
 }
 
-nav a {
+aside > nav a {
   display: block;
   margin-top: 5px;
 }
 
-nav a:first-child {
+aside > nav a:first-child {
   margin-top: 0;
 }
 
@@ -175,7 +175,11 @@ address a:last-child {
   margin-right: 5px;
 }
 
-.dn-ns {
+.dn-mobile {
+  display: block;
+}
+
+.dn-desktop {
   display: none;
 }
 
@@ -186,10 +190,45 @@ address a:last-child {
   }
 
   header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+  }
+
+  nav > a {
+    margin-right: 10px;
+  }
+
+  nav img {
+    display: block;
+  }
+
+  .dn-mobile {
     display: none;
   }
 
-  .dn-ns {
+  .dn-desktop {
     display: block;
+  }
+
+  #logo-wrapper img {
+    margin-top: inherit;
+  }
+
+  .contact p {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 555px) {
+  nav {
+    margin-top: 5px;
   }
 }
