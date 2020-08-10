@@ -30,6 +30,7 @@ a {
 }
 
 @font-face {
+  font-display: swap;
   font-family: "Parkway Lush";
   src: url("./resources/fonts/parkway-lush.ttf") format("truetype");
 }
@@ -49,6 +50,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50%;
+  background-color: #05253b;
   color: white;
   display: flex;
   flex-direction: column;
@@ -61,11 +63,6 @@ main {
   flex-direction: row;
   padding: 40px 20px 30px 40px;
   flex: 1;
-}
-
-article {
-  text-align: left;
-  width: 270px;
 }
 
 #paragraph-first {
@@ -93,7 +90,7 @@ footer {
   position: relative;
 }
 
-footer small {
+small {
   font-size: 10px;
   transform: rotate(180deg);
   display: block;
@@ -175,18 +172,22 @@ address a:last-child {
   margin-right: 5px;
 }
 
-.dn-mobile {
-  display: block;
-}
+@media only screen and (min-width: 1084px) {
+  .dn-desktop {
+    display: none;
+  }
 
-.dn-desktop {
-  display: none;
+  article {
+    text-align: left;
+    width: 270px;
+  }
 }
 
 @media only screen and (max-width: 1084px) {
   main {
     flex-direction: column;
     padding: 10px;
+    height: calc(100vh - 20px);
   }
 
   header {
@@ -214,16 +215,28 @@ address a:last-child {
     display: none;
   }
 
-  .dn-desktop {
-    display: block;
-  }
-
   #logo-wrapper img {
     margin-top: inherit;
   }
 
   .contact p {
     font-size: 14px;
+  }
+
+  small {
+    top: auto;
+    right: 10px;
+    bottom: 20px;
+    left: auto;
+  }
+
+  article {
+    text-align: center;
+    padding: 30px 15%;
+  }
+
+  #partners {
+    width: 100%;
   }
 }
 
