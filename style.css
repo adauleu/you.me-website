@@ -86,7 +86,7 @@ footer {
   background-position-x: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 81px;
+  min-height: 81px;
   position: relative;
 }
 
@@ -190,6 +190,16 @@ address a:last-child {
     height: calc(100vh - 20px);
   }
 
+  #logo-wrapper img {
+    position: absolute;
+    top: -6%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: -1;
+  }
+
   header {
     display: flex;
     flex-direction: row;
@@ -213,10 +223,6 @@ address a:last-child {
 
   .dn-mobile {
     display: none;
-  }
-
-  #logo-wrapper img {
-    margin-top: inherit;
   }
 
   .contact p {
@@ -243,5 +249,13 @@ address a:last-child {
 @media only screen and (max-width: 555px) {
   nav {
     margin-top: 5px;
+  }
+
+  footer {
+    min-height: 54px;
+  }
+
+  #partners > img {
+    height: 25px;
   }
 }
