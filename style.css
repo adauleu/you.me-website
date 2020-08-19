@@ -52,7 +52,6 @@ body {
   background-position: 50%;
   background-color: #05253b;
   color: white;
-  display: flex;
   flex-direction: column;
   text-align: center;
   font-family: "Poppins", sans-serif;
@@ -175,6 +174,10 @@ address a:last-child {
 @media only screen and (min-width: 1084px) {
   .dn-desktop {
     display: none;
+  }
+
+  body {
+    display: flex;
   }
 
   article {
