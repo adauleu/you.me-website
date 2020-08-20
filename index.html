@@ -7,7 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>You.me | En construction</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <meta name="owner" content="You.Me" />
     <meta name="language" content="French" />
     <meta http-equiv="content-language" content="fr-FR" />
@@ -104,10 +106,21 @@
       </article>
       <div id="logo-wrapper">
         <img
+          id="logo-youme-desktop"
+          class="dn-mobile"
           src="./resources/logos/you-me.svg"
           draggable="false"
           alt="You.Me"
         />
+
+        <div class="dn-desktop" id="logo-youme-mobile">
+          <img
+            id="logo-youme-mobile-construction"
+            src="./resources/logos/construction.svg"
+            draggable="false"
+            alt="En construction"
+          />
+        </div>
       </div>
       <aside class="dn-mobile">
         <p>Rejoignez-nous !</p>
@@ -143,7 +156,6 @@
           </a>
         </nav>
       </aside>
-      <small class="dn-desktop">photographie : Anne-Cécile Esteve©</small>
     </main>
     <article class="dn-desktop">
       <img src="./resources/solidaire.png" alt="Restaurant solidaire" />
@@ -157,7 +169,7 @@
       </p>
     </article>
     <footer>
-      <small class="dn-mobile">photographie : Anne-Cécile Esteve©</small>
+      <small>photographie : Anne-Cécile Esteve©</small>
 
       <div id="partners">
         <img

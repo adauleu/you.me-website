@@ -60,8 +60,9 @@ body {
 main {
   display: flex;
   flex-direction: row;
-  padding: 40px 20px 30px 40px;
+  margin: 40px 20px 30px 40px;
   flex: 1;
+  position: relative;
 }
 
 #paragraph-first {
@@ -80,23 +81,14 @@ footer {
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-image: url("./resources/bandeau-desktop.svg");
-  /** background-color: rgba(255, 255, 255, 0.8); **/
-  background-position-x: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   min-height: 81px;
   position: relative;
 }
 
 small {
   font-size: 10px;
-  transform: rotate(180deg);
   display: block;
   position: absolute;
-  left: 10px;
-  top: -200px;
-  writing-mode: tb-rl;
 }
 
 footer > div {
@@ -107,7 +99,7 @@ footer > div {
   flex: 1;
 }
 
-#logo-wrapper img {
+#logo-youme-desktop {
   height: 100%;
   vertical-align: middle;
   margin-top: -5%;
@@ -150,6 +142,7 @@ aside > nav a:first-child {
 .contact p {
   color: #b5dac7;
   font-size: 16px;
+  white-space: nowrap;
 }
 
 .contact > div {
@@ -184,23 +177,53 @@ address a:last-child {
     text-align: left;
     width: 270px;
   }
+
+  footer {
+    background-image: url("./resources/bandeau-desktop.svg");
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  small {
+    left: 10px;
+    top: -200px;
+    writing-mode: tb-rl;
+    transform: rotate(180deg);
+  }
 }
 
 @media only screen and (max-width: 1084px) {
   main {
     flex-direction: column;
-    padding: 10px;
+    margin: 10px;
     height: calc(100vh - 20px);
   }
 
-  #logo-wrapper img {
+  section {
     position: absolute;
-    top: -6%;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    width: 100%;
+    font-size: 14px;
+  }
+
+  #logo-wrapper {
+    display: flex;
+  }
+
+  #logo-youme-mobile {
     margin: auto;
-    z-index: -1;
+    width: 100%;
+    background: url(./resources/logos/logo-mobile.svg) center center no-repeat;
+    min-height: 201px;
+    position: relative;
+    background-size: contain;
+    max-width: 451px;
+  }
+
+  #logo-youme-mobile-construction {
+    position: absolute;
+    top: -70%;
+    left: 33%;
   }
 
   header {
@@ -229,7 +252,7 @@ address a:last-child {
   }
 
   .contact p {
-    font-size: 14px;
+    font-size: inherit;
   }
 
   small {
@@ -247,6 +270,16 @@ address a:last-child {
   #partners {
     width: 100%;
   }
+
+  footer {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  small {
+    left: 10px;
+    right: auto;
+    bottom: -20px;
+  }
 }
 
 @media only screen and (max-width: 555px) {
@@ -260,5 +293,27 @@ address a:last-child {
 
   #partners > img {
     height: 25px;
+  }
+}
+
+/** Quand la zone de contact passe sur deux lignes **/
+@media only screen and (max-width: 520px) {
+  #logo-youme-mobile-construction {
+    height: 119px;
+    width: 127px;
+    top: -39%;
+  }
+
+  section {
+    font-size: 3.7vw;
+  }
+
+  nav {
+    margin-left: 0;
+  }
+
+  nav img {
+    height: 30px;
+    width: 30px;
   }
 }
