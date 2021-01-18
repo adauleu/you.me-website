@@ -197,7 +197,8 @@ address a:last-child {
 
 @media only screen and (min-width: 1500px) {
   #temp div {
-    padding: 20px;
+    padding: 15px;
+    font-size: 0.9rem;
   }
   #temp div p:not(:last-child) {
     margin-bottom: 12px;
@@ -328,12 +329,6 @@ address a:last-child {
     font-size: 0.8rem;
     width: 100%;
     transform: none;
-    max-height: 30%;
-    overflow-y: auto;
-  }
-
-  #temp video {
-    display: none;
   }
 }
 
